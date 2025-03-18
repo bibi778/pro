@@ -1,0 +1,138 @@
+<html lang="kk">
+<head>
+    <meta charset="utf-8">
+    <title>Мейрамхана - Байланыс</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Стильдер -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #003366;
+        }
+
+        /* Навигация */
+        .navbar {
+            background-color: #0056b3 !important;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        /* Слайдер (Ресторан интерьері) */
+        .carousel-item img {
+            border-radius: 15px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+       
+
+        /* Футер */
+        .footer {
+            background: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i> Мейрамхана</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="мейрамхана.html">Басты бет</a></li>
+                    <li class="nav-item"><a class="nav-link" href="меню мейрамхана.html">Мәзір</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="байланыс мейрамхана.html">Байланыс</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Басты сурет -->
+    <header class="hero">
+        <div>
+            <h1 class="display-3 fw-bold">Байланыс</h1>
+            <p class="lead">Кез келген сұрақтарыңыз бойынша бізбен хабарласыңыз</p>
+        </div>
+    </header>
+
+    <!-- Байланыс ақпараты -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Бізбен байланыс</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5><i class="fa fa-map-marker-alt text-primary"></i> Мекенжай:</h5>
+                <p>Астана, Қабанбай батыр көшесі, 25</p>
+                
+                <h5><i class="fa fa-phone text-primary"></i> Телефон:</h5>
+                <p>+7 (700) 965-20-86</p>
+
+                <h5><i class="fa fa-envelope text-primary"></i> Email:</h5>
+                <p>info@meiramhana.kz</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Бізге хабарлама жіберіңіз:</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Аты-жөніңіз</label>
+                        <input type="text" class="form-control" id="name" placeholder="Аты-жөніңіз">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Хабарлама</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Хабарламаңызды жазыңыз..."></textarea>
+                    </div>
+					<button type="button" class="btn btn-success" onclick="sendToWhatsApp()">WhatsApp арқылы жіберу</button>
+
+					<script>
+					function sendToWhatsApp() {
+					    let name = document.getElementById("name").value;
+					    let email = document.getElementById("email").value;
+					    let message = document.getElementById("message").value;
+
+					    let phoneNumber = "77009652086"; // Өз нөміріңізді енгізіңіз (кодсыз)
+
+					    let text = `Аты: ${name}%0AEmail: ${email}%0AХабарлама: ${message}`;
+
+					    let url = `https://wa.me/${phoneNumber}?text=${text}`;
+					    window.open(url, "_blank");
+					}
+					</script>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 Мейрамхана | Барлық құқықтар қорғалған</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
