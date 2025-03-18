@@ -4,7 +4,7 @@ body {
     color: #003366;
 }
 
-/* Навигация */
+
 .navbar {
     background-color: #0056b3 !important;
 }
@@ -15,14 +15,14 @@ body {
     color: #ffcc00 !important;
 }
 
-/* Слайдер (Ресторан интерьері) */
+
 .carousel-item img {
     border-radius: 15px;
     height: 400px;
     object-fit: cover;
 }
 
-/* "Танымал тағамдар" бөлімі */
+
 .menu-card {
     background: white;
     border-radius: 10px;
@@ -42,7 +42,7 @@ body {
     font-weight: bold;
 }
 
-/* Футер */
+
 .footer {
     background: #0056b3;
     color: white;
